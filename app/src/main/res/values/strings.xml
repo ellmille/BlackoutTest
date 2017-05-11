@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BlackoutTest</string>
+    <string name="click_me">Click Me</string>
+    <string name="time">Time</string>
+    <string name="_5_sec_timeout">5 sec timeout</string>
+    <string name="dim_screen">Dim Screen</string>
+    <string name="set_wake_lock">Set Wake Lock</string>
+    <string name="set_timed_wake_lock">Set Timed Wake Lock</string>
+    <string name="allows_the_screen_to_be_turned_off_keeps_app_running">Allows the screen to be turned off. Keeps app running</string>
+</resources>
