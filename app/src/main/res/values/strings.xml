@@ -7,4 +7,8 @@
     <string name="set_wake_lock">Set Wake Lock</string>
     <string name="set_timed_wake_lock">Set Timed Wake Lock</string>
     <string name="allows_the_screen_to_be_turned_off_keeps_app_running">Allows the screen to be turned off. Keeps app running</string>
+    <string name="change_colors">Change Colors</string>
+    <string name="switch_theme">Switch Theme</string>
+    <string name="go_back">Return</string>
+    <string name="here_is_some_sample_text_to_view_as_the_theme_changes">Here is some sample text to view as the theme changes! :)</string>
 </resources>

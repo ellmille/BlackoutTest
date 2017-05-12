@@ -8,4 +8,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TestTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
+        <item name="colorAccent">@color/colorAccent2</item>
+        <item name="android:background">@color/backgroundColor</item>
+        <item name="android:textColor">@color/testText</item>
+    </style>
+
+    <style name="NighVision">
+        <item name="colorPrimary">@color/nightPrimary</item>
+        <item name="colorPrimaryDark">@color/nightPrimaryDark</item>
+        <item name="colorAccent">@color/nightAccent</item>
+        <item name="android:background">@color/nightBackground</item>
+        <item name="android:textColor">@color/nightText</item>
+        <item name="android:colorButtonNormal">@color/nightButton</item>
+    </style>
+
 </resources>

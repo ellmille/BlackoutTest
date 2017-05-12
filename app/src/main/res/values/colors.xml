@@ -3,4 +3,18 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimary2">#ed0ba9</color>
+    <color name="colorPrimaryDark2">#1ea027</color>
+    <color name="colorAccent2">#1e9da0</color>
+    <color name="backgroundColor">#d2f7eb</color>
+    <color name="testText">#5e118e</color>
+
+    <color name="nightPrimary">#138e34</color>
+    <color name="nightPrimaryDark">#185b2a</color>
+    <color name="nightAccent">#689162</color>
+    <color name="nightBackground">#000000</color>
+    <color name="nightText">#39a506</color>
+    <color name="nightButton">#515450</color>
+
 </resources>

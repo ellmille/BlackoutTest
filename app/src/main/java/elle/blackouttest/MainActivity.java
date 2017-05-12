@@ -16,7 +16,7 @@ import static java.lang.Thread.sleep;
 
 public class MainActivity extends AppCompatActivity {
     TextView counterView;
-    Button blackoutButton, timedBlackoutButton, dimScreenButton;
+    Button blackoutButton, timedBlackoutButton, dimScreenButton, colorButton;
     int counter;
     CountThread countThread;
     boolean isThreadRunning, isDim;
@@ -26,9 +26,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //init settings
+        ThemeSettings.initInstance();
+        //grab and set theme and view
+        setTheme(ThemeSettings.getInstance().getCurrentTheme());
         setContentView(R.layout.activity_main);
 
         //set up View elements
+        colorButton = (Button) findViewById(R.id.button3);
+        colorButton.setOnClickListener(colorButtonListener);
         dimScreenButton = (Button) findViewById(R.id.button2);
         dimScreenButton.setOnClickListener(dimScreenButtonListener);
         isDim = false;
@@ -47,12 +54,20 @@ public class MainActivity extends AppCompatActivity {
         wakelock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "no sleep");
         //can we change settings?
         if(!Settings.System.canWrite(this.getApplicationContext())){
-            //ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_SETTINGS}, Settings.ACTION_MANAGE_WRITE_SETTINGS);
+            //ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_SETTINGS}, ThemeSettings.ACTION_MANAGE_WRITE_SETTINGS);
             Intent intent = new Intent(android.provider.Settings.ACTION_MANAGE_WRITE_SETTINGS);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
     }
+
+    private View.OnClickListener colorButtonListener = new View.OnClickListener(){
+        @Override
+        public void onClick(View v) {
+            Intent themeIntent = new Intent(getApplicationContext(), ThemeActivity.class);
+            startActivity(themeIntent);
+        }
+    };
 
     private View.OnClickListener dimScreenButtonListener = new View.OnClickListener() {
         public void onClick(View v){
