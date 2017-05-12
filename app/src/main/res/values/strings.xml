@@ -11,4 +11,6 @@
     <string name="switch_theme">Switch Theme</string>
     <string name="go_back">Return</string>
     <string name="here_is_some_sample_text_to_view_as_the_theme_changes">Here is some sample text to view as the theme changes! :)</string>
+    <string name="go_back1">Go Back</string>
+    <string name="go_forward">Go Forward</string>
 </resources>

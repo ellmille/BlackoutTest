@@ -14,9 +14,9 @@ import android.widget.TextView;
 
 import static java.lang.Thread.sleep;
 
-public class MainActivity extends AppCompatActivity {
+public class BlackoutActivity extends AppCompatActivity {
     TextView counterView;
-    Button blackoutButton, timedBlackoutButton, dimScreenButton, colorButton;
+    Button blackoutButton, timedBlackoutButton, dimScreenButton, nextButton, prevButton;
     int counter;
     CountThread countThread;
     boolean isThreadRunning, isDim;
@@ -34,8 +34,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //set up View elements
-        colorButton = (Button) findViewById(R.id.button3);
-        colorButton.setOnClickListener(colorButtonListener);
+        nextButton = (Button) findViewById(R.id.button5);
+        nextButton.setOnClickListener(colorButtonListener);
+        prevButton = (Button) findViewById(R.id.button7);
+        prevButton.setOnClickListener(colorButtonListener);
+
         dimScreenButton = (Button) findViewById(R.id.button2);
         dimScreenButton.setOnClickListener(dimScreenButtonListener);
         isDim = false;

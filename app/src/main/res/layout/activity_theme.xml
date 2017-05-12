@@ -3,13 +3,31 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:layout_gravity="bottom|center_vertical"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:drawableTop="@drawable/ic_navigate_before" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:drawableTop="@drawable/ic_navigate_next"
+            android:gravity="end" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
@@ -23,12 +41,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:text="@string/switch_theme" />
-
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="@string/go_back" />
 
 </LinearLayout>

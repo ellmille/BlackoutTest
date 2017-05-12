@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class ThemeActivity extends AppCompatActivity {
     Activity themeActivity;
-    Button switchThemeButton, returnButton;
+    Button switchThemeButton, nextButton, prevButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +27,11 @@ public class ThemeActivity extends AppCompatActivity {
         switchThemeButton = (Button) findViewById(R.id.button4);
         switchThemeButton.setOnClickListener(switchThemeButtonListener);
 
-        returnButton = (Button) findViewById(R.id.button6);
-        returnButton.setOnClickListener(returnButtonListener);
+        //set up View elements
+        nextButton = (Button) findViewById(R.id.button5);
+        nextButton.setOnClickListener(returnButtonListener);
+        prevButton = (Button) findViewById(R.id.button7);
+        prevButton.setOnClickListener(returnButtonListener);
 
         themeActivity = this;
     }
@@ -44,7 +47,7 @@ public class ThemeActivity extends AppCompatActivity {
     private View.OnClickListener returnButtonListener = new View.OnClickListener(){
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            Intent intent = new Intent(getApplicationContext(), BlackoutActivity.class);
             startActivity(intent);
         }
     };
